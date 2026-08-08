@@ -14,8 +14,11 @@ provider are all healthy, and while its sidecar log contains only its two lifeti
 ## Reproduction
 
 ```sh
-nix run github:schickling-repros/2026-08-st2-claude-placeholder-blocks-ding
+nix run github:schickling-repros/2026-08-st2-claude-placeholder-blocks-ding/ceaf1bb88ea3d5f332fe55696cc5714a842e1110
 ```
+
+The bare `nix run github:schickling-repros/2026-08-st2-claude-placeholder-blocks-ding` resolves the
+default branch and works too; the pinned form above is what the issue references.
 
 Takes about a minute. Everything runs against a private `PTY_ROOT`, a private bus root and a private
 `XDG_STATE_HOME` under `$TMPDIR`, and is removed on exit.
@@ -90,4 +93,4 @@ own preconditions:
 
 ## Related issue
 
-<!-- filled in after filing -->
+https://github.com/compoundingtech/st2/issues/200
